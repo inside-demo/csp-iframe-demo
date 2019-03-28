@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<style>
+		h1, h2 {
+			font-size: 18px;
+			font-weight: normal;
+		}
+		iframe {
+			box-shadow: 0 8px 12px -4px rgba(0, 0, 0, 0.11);
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<h1>main js from self origin loaded</h1>
+	<h2 style="color: red;">jquery from unpkg loaded</h2>
+	<iframe src="https://webref.ru/" width="1024" height="768" frameborder="0"></iframe>
+
+	<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+	<script>
+		if (window.hasOwnProperty('$')) {
+			$('h2').css({color: 'green'});
+		}
+	</script>
+	<script src="/main.bundle.js"></script>
+</body>
+</html>
